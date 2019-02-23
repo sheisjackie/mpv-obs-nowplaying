@@ -2,7 +2,7 @@
 local obs = _G.obslua
 local source_name = "np3"
 function update_nowplaying()
-   local in_file = io.open("/home/jackie/mpvnp.txt", "r")
+   local in_file = io.open(os.getenv("HOME").."/mpvnp.txt", "r")
    local file_text = in_file:read()
    local obs_source = obs.obs_get_source_by_name(source_name)
 

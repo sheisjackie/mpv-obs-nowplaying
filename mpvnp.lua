@@ -6,7 +6,7 @@ function new_file_loaded()
    local album = get_metadata(metadata, {"album", "ALBUM"})
    local title = get_metadata(metadata, {"title", "TITLE"})
    
-   file = io.open("/home/jackie/mpvnp.txt", "w")
+   file = io.open(os.getenv("HOME").."/mpvnp.txt", "w")
    file:write("Now playing: ", artist, " - ", title)
    file:close()
 end
